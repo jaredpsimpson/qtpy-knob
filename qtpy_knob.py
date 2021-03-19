@@ -16,8 +16,8 @@ from adafruit_hid.consumer_control_code import ConsumerControlCode
 # number of seconds to keep LED ring on, 0 == keep on forever
 ring_on_time = 0
 
-# 16 position neopixel ring
-ring = neopixel.NeoPixel(board.MISO, 16, brightness=0.2, auto_write=False)
+# 16 position neopixel ring - change neopixel.RGB to neopixel.GRBW for ring with RGBW
+ring = neopixel.NeoPixel(board.MISO, 16, brightness=0.2, auto_write=False, pixel_order=neopixel.GRBW)
 
 # button of rotary encoder
 button = DigitalInOut(board.MOSI)
